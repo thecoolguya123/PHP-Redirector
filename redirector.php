@@ -11,9 +11,7 @@ else{
     ob_flush();
     flush(); 
     sleep(3); 
-    echo "<script>
-              window.location.href = '$url';
-        </script>"; // Redirection part
+    header("Location: $url"); // Redirection part
     } else{
     echo "<h1>400 Bad Request: Only HTTP URLs allowed.</h1>";  
     }
