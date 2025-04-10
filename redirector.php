@@ -22,7 +22,7 @@ else{
     ob_flush();
     flush(); // Making sure redirection message gets sent to the browser
     sleep(3); 
-    header(Location: "http://$url/") 
+    header(Location: "http://$url/");
     }
 }
 ?>
