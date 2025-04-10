@@ -18,7 +18,11 @@ else{
     echo "<h1>400 Bad Request: Only HTTP URLs allowed.</h1>";  
     }
     } else{
-        echo "<h1>400 Bad Request: Invalid URL format<br>Add the `http://` header before `$url`.</h1>";  // Error messages
+    echo "<h3><code>Redirecting you to `$url` ...</code></h3>";  
+    ob_flush();
+    flush(); // Making sure redirection message gets sent to the browser
+    sleep(3); 
+    header(Location: "http://$url/") 
     }
 }
 ?>
